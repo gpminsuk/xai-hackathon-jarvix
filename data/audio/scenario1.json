@@ -1,0 +1,214 @@
+{
+  "user_id": "scenario1",
+  "total_audio": 26,
+  "extractions": [
+    {
+      "filename": "2p_argument.mp3",
+      "date": "2p_argument",
+      "content": {
+        "transcription": " I can't believe you did it again. I waited for two hours—two hours! Not a single call, not a text. Do you have any idea how embarrassing that was, just sitting there alone? Look, I know I'm sorry, alright? Work was a complete nightmare. My boss dropped a critical deadline on me at the last minute. I didn't even have a second to breathe, let alone check my phone. A nightmare? That's the same excuse you used last time. I'm starting to think you just don't care. It's easier to say work was crazy than to just admit that I'm not a priority for you anymore. That's not fair! Of course you're a priority. You think I enjoyed being stuck in that office, drowning in spreadsheets, while knowing I was letting you down? It was stressful, and I felt terrible. I just—I was really looking forward to tonight. I've had a rough week, and I just wanted to see you. When you don't show, it doesn't just feel like a broken plan—it feels like I don't matter. You're right, it's not fair to you. There's no excuse. I should've found a way to let you know, even if it was just a 30-second call. I messed up. I'm really, truly sorry. How can I make it up to you?",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "2p_see_u_again.mp3",
+      "date": "2p_see_u_again",
+      "content": {
+        "transcription": " Hey, remember See You Again? Yeah, from Furious 7, right? That song always hits deep. Let me try to sing a part of it for you. It's been a long day without you, my friend, and I'll tell you all about it when I see you again. Wow. That line, every time. Yeah, and then this part always makes me think of the people I've lost. We've come a long way from where we began. Oh, I'll tell you all about it when I see you again. It's beautiful, really. It's not just sad, it's like hopeful. Right, like no matter how far apart we are, there's still that promise. I think that's what made it the perfect farewell for Paul Walker. Yeah, and the rap verse? It hits differently too. How can we not talk about family when family's all that we got? That line's deep. Makes you realize what really matters. Exactly. It's more than a song. It's a tribute.",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "brother.mp3",
+      "date": "brother",
+      "content": {
+        "transcription": " Hey, you busy? Just driving. What's up? I need your advice on something. Sure, what is it? I'm thinking about switching jobs. There's this new offer. Oh wow, that's big. What's the offer like? Better pay, but it's in a different city. That's tough. What does your gut tell you? I think I wanna take it, but I'm nervous. Change is scary, but sometimes necessary. I say go for it. Thanks, bro. I needed to hear that. Let's talk more Sunday. For sure. I got your back no matter what.",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "coffee_shop.mp3",
+      "date": "coffee_shop",
+      "content": {
+        "transcription": " Welcome to Daily Brew, what can I get for you today? Hi, can I get a large iced latte with oat milk, please? Sure, one large iced latte with oat milk. Would you like any flavor shots with that? Yes! Can I add vanilla? Of course, one large iced vanilla latte with oat milk. Anything else? That's all, thank you! Your total is six dollars and fifty cents, please drive to the window. Thanks!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "coffee_shop1.mp3",
+      "date": "coffee_shop1",
+      "content": {
+        "transcription": " Good morning! Welcome to Bean There. What can I get you? Hey, I'm in a rush—can I get a large cold brew with oat milk? Sure thing! Want any sweetener? Just a splash of vanilla syrup, please. Got it. Large cold brew, oat milk, vanilla. That's 5.75. Perfect, here's my card. Pull up to the window. Have a great day!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "coffee_shop2.mp3",
+      "date": "coffee_shop2",
+      "content": {
+        "transcription": " Hi there! Welcome to Java Junction—what sounds good today? I need something refreshing—what do you recommend with oat milk? Our iced honey oat lattes is really popular! That sounds perfect, I’ll take a large. Excellent choice! Anything else? Maybe a chocolate chip cookie? You got it, total is 8.25 at the window. Thanks!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "coffee_shop3.mp3",
+      "date": "coffee_shop3",
+      "content": {
+        "transcription": " Hey, welcome to Night Owl Coffee—what can I make you? I need to stay up late—what’s your strongest drink with oat milk? Try our Red Eye Coffee with an extra shot—I can make it with oat milk. Perfect, make it a large, please. Coming right up—need any food? No thanks, just the coffee. That’ll be six dollars and fifty, drive on through.",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "father.mp3",
+      "date": "father",
+      "content": {
+        "transcription": " Hello son, how's the drive? Hey Dad, traffic's not too bad today. Good, good. Your mother wanted me to ask about Sunday dinner. Oh right, yes, I'm coming! Should I bring anything? Just yourself. Maybe some of that wine you brought last time. The red one? Sure, I'll pick up a bottle. Perfect, your sister will be there too. Great, it'll be nice to see everyone. Drive safe, son. We'll see you Sunday. Thanks, Dad. See you then!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "friend1.mp3",
+      "date": "friend1",
+      "content": {
+        "transcription": " Yo dude, you getting on tonight? Yeah man, what time are you thinking? Like 9? The new update dropped today! Oh sick, I didn’t know that, what’s new? New map and some weapon balancing. It’s supposed to be good. Nice, I’ll be there. Is Jake playing too? He’s already downloaded it, we need a fourth though. I’ll ask my brother, he might be down. Perfect, see you at 9 then. Later!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "friend2.mp3",
+      "date": "friend2",
+      "content": {
+        "transcription": " Bro, did you see the game last night? No way I missed it! That last-minute goal was insane! I know right? I was screaming at my TV! We should go watch the next game at the sports bar. That's a great idea! When's the next one? Saturday at 4. You free? Yeah, I'm in! I'll bring Chris too. Awesome, let's get there early to grab a good spot. For sure! Later man!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "friend3.mp3",
+      "date": "friend3",
+      "content": {
+        "transcription": " Hey! You still down for the road trip next month? Absolutely, I already requested the days off. Sweet! I found this cool cabin on Airbnb. Oh nice, where is it? Up in the mountains, about four hours away. It has a hot tub. That sounds amazing! How much per person? Like 80 bucks each for three nights. Not bad, right? That's a steal! Book it before someone else does! On it, I'll send you the link. This is gonna be epic!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "girlfriend1.mp3",
+      "date": "girlfriend1",
+      "content": {
+        "transcription": " Hey babe, are you still driving? Yeah, I'm on my way home now. What's up? I was thinking about dinner. Do you want to cook or order something? Hmm, I'm pretty tired. How about we order Thai food? Oh yes! I've been craving pad thai all day. Perfect, I'll order it now so it arrives when I get home. You're the best! Get me a Thai iced tea too, please. Of course! See you in about 20 minutes. Love you! Love you too! Drive safe!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "girlfriend2.mp3",
+      "date": "girlfriend2",
+      "content": {
+        "transcription": " Hi honey, what time will you be done with work? I should be leaving in about an hour. Why? My friend Sarah invited us to her birthday party this Saturday. Oh nice, what time is it? It starts at 7. It's at that rooftop bar downtown. Sounds fun! Should we get her a gift together? Yes! Can we go shopping tomorrow after work? Sure thing. Let's meet at the mall around 6. Perfect, you're so sweet! See you tonight!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "girlfriend3.mp3",
+      "date": "girlfriend3",
+      "content": {
+        "transcription": " Hey, I miss you. I miss you too, this traffic is killing me. Aww, how long until you're home? Probably another 30 minutes at this rate. I made your favorite cookies while waiting. Really? Chocolate chip? Of course, they're still warm. You're amazing, now I can't wait to get home. Hurry, but be safe, I'll have everything ready. See you soon, babe!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "kfc.mp3",
+      "date": "kfc",
+      "content": {
+        "transcription": " Welcome to KFC, what can I get for you? Hi, I'd like a three-piece chicken meal please. Original recipe or extra crispy? Extra crispy please. And what sides would you like? You get two. Coleslaw and mashed potatoes with gravy. Great choice! What to drink? Large sweet tea please. Alright, three-piece extra crispy meal with coleslaw, mashed potatoes and gravy, and a large sweet tea. Your total is twelve dollars and forty-nine cents. Perfect, thanks!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "kfc2.mp3",
+      "date": "kfc2",
+      "content": {
+        "transcription": " Welcome to KFC! Go ahead with your order. Hi, can I get an eight-piece bucket? Original or crispy? Can I do half and half? Absolutely! What sides would you like? Large coleslaw and large mac and cheese. Perfect combo! Anything else? A dozen biscuits, please. You got it! Total is $34.99 at the window.",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "mcdonalds.mp3",
+      "date": "mcdonalds",
+      "content": {
+        "transcription": " Welcome to McDonald's, may I take your order? Hi, can I get a Big Mac meal with large fries? Sure, what drink would you like with that? I'll have a medium Coke, please. Got it, a Big Mac meal with large fries and a medium Coke. Would you like to add anything else? Can I also get a 10-piece chicken nuggets? 10-piece nuggets added. What sauce would you like? Sweet and sour, please. Perfect, your total is $15.99 at the first window. Thank you!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "mcdonalds2.mp3",
+      "date": "mcdonalds2",
+      "content": {
+        "transcription": " Welcome to McDonald's! Order when you're ready. Can I get two McChicken sandwiches? Sure, would you like to make those meals? No, just the sandwiches, and a large fry to share. Two McChickens and a large fry. Anything to drink? Two medium Sprites, please. Got it, that's 11.47 at the first window. Thanks!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "mother.mp3",
+      "date": "mother",
+      "content": {
+        "transcription": " Hi, sweetie! Are you driving? Hi, Mom! Yeah, I'm on my way home from work. Are you eating enough? You sounded tired last time. Yes, Mom, I'm eating fine. Just been busy with work. You work too hard—remember to take breaks. I know, I know. I'll try to rest this weekend. Good! Oh, I'm making your favorite lasagna on Sunday. Really? I can't wait! Dad mentioned I should bring wine. Yes, please! And maybe come a little early so we can chat. Will do, Mom. Love you! Love you too, honey! Drive carefully!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "sister.mp3",
+      "date": "sister",
+      "content": {
+        "transcription": " Hey, big bro, got a minute? Hey. Yeah, I'm just driving home. What's up? I need help picking a birthday gift for mom. Oh, right, her birthday is coming up. Any ideas? Oh, right, her birthday is coming up. Any ideas? Alright, her birthday is coming up. Any ideas? Sounds good. See you Sunday. Can't wait. Bye!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "starbucks.mp3",
+      "date": "starbucks",
+      "content": {
+        "transcription": " Good morning! Welcome to Starbucks. What can I get started for you? Hi, can I get a grande iced caramel macchiato with oat milk? Absolutely, grande iced caramel macchiato with oat milk. Would you like extra caramel drizzle? Yes, please! And can I also get a butter croissant? Of course, one butter croissant. Can I get a name for the order? It's Mike. Got it, Mike. Your total is $9.75. Please pull forward. Thank you so much! See you at the window!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "starbucks2.mp3",
+      "date": "starbucks2",
+      "content": {
+        "transcription": " Welcome to Starbucks, what can I get for you? Hi, can I get a venti iced white mocha with oat milk? Sure, would you like whipped cream on that? No whip, please, and can you make it with blonde espresso? Absolutely! Anything else today? Add a bacon gouda sandwich, please. Got it, that'll be 12:45 at the window. Thank you!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "starbucks3.mp3",
+      "date": "starbucks3",
+      "content": {
+        "transcription": " Good afternoon! Welcome to Starbucks. What are we making for you? Can I get a grande pink drink with extra strawberries? Of course! Coconut milk or would you like to sub oat milk? Oat milk, please. Pink drink, oat milk, extra strawberries. Anything else? A cake pop too. The birthday cake one? Great choice! Your total is 8.95. See you at the window!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "starbucks4.mp3",
+      "date": "starbucks4",
+      "content": {
+        "transcription": " Hi, welcome to Starbucks. What can I get started for you? Yeah, can I get a grande uh oatmeal latte? Sure, anything else? I want grande oat milk shaken espresso. Got it. Um, you're totally at the window.",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "tacobell.mp3",
+      "date": "tacobell",
+      "content": {
+        "transcription": " Welcome to Taco Bell, what can I get started for you? Can I get a Crunchwrap Supreme? Sure, wanna make it a combo? Yes please, with a Baja Blast. Nice choice, anything else? Add two soft tacos and a side of nachos. Got it, that'll be $14.89 at the window. Perfect, thanks!",
+        "summary": ""
+      }
+    },
+    {
+      "filename": "wendys.mp3",
+      "date": "wendys",
+      "content": {
+        "transcription": " Hi, can I get a Baconator combo? What size? Large, please, with a Frosty instead of the drink. Chocolate or vanilla Frosty? Chocolate! Great! Anything else? That's all, thanks! Your total is $13.59. Pull forward, please!",
+        "summary": ""
+      }
+    }
+  ]
+}

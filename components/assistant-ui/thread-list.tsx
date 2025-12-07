@@ -5,34 +5,20 @@ import {
   ThreadListPrimitive,
   useAssistantRuntime,
 } from "@assistant-ui/react";
-import { ArchiveIcon, PlusIcon, RefreshCwIcon, TrashIcon } from "lucide-react";
-import { useState } from "react";
+import { PlusIcon, TrashIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { getNewThreadText, fixedUserIds } from "./utils";
+import { getNewThreadText, getTriggerForUser, getSystemPromptForUser, getGreetingContextForUser, getMem0UserId } from "./utils";
 import { GreetingLoadingContext } from "./greeting-context";
-// import ThemeAwareLogo from "@/components/assistant-ui/theme-aware-logo";
-// import Link from "next/link";
+import { readChatStream } from "./streaming";
+
 interface ThreadListProps {
   isDarkMode: boolean;
   userId?: string;
 }
 
 export const ThreadList: FC<ThreadListProps> = ({ userId }) => {
-  const [open, setOpen] = useState(false);
-
   return (
     <div className="flex-col h-full border-r border-[#e2e8f0] bg-white dark:bg-zinc-900 dark:border-zinc-800 p-3 overflow-y-auto hidden md:flex">
       <ThreadListPrimitive.Root className="flex flex-col justify-between h-full items-stretch gap-1.5">
@@ -52,17 +38,22 @@ export const ThreadList: FC<ThreadListProps> = ({ userId }) => {
 
 const ThreadListNew: FC<{ userId?: string }> = ({ userId }) => {
   const runtime = useAssistantRuntime();
-  const { setIsLoading } = React.useContext(GreetingLoadingContext);
+  const { isLoading, setIsLoading } = React.useContext(GreetingLoadingContext);
 
-  // Make a separate API call to generate greeting (not as a user message)
+  // Generate greeting with proper trigger and system prompt
   const generateGreeting = async () => {
+    if (isLoading) return; // Prevent double-clicks
     setIsLoading(true);
     try {
-      // Use the userId prop passed from parent component
-      const currentUserId = userId || "scenario1";
+      const displayName = userId || "Mark (Starbucks)";
+      const trigger = getTriggerForUser(displayName);
+      const systemPrompt = getSystemPromptForUser(displayName);
+      const greetingContext = getGreetingContextForUser(displayName);
+      const mem0UserId = getMem0UserId();
+
+      console.log(`[Greeting] Generating for ${displayName}, mem0 user: ${mem0UserId}`);
 
       // Make direct API call to generate greeting
-      // Format messages correctly for mem0 and AI SDK (content can be string or array)
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
@@ -72,11 +63,12 @@ const ThreadListNew: FC<{ userId?: string }> = ({ userId }) => {
           messages: [
             {
               role: "user",
-              content: "Generate a greeting message",
+              content: greetingContext, // Use scenario-specific context
             },
           ],
-          userId: currentUserId,
-          system: fixedUserIds.find((id) => id[0] == currentUserId)?.[2] || "",
+          userId: mem0UserId, // Use demo_user for all mem0 queries
+          trigger: trigger,
+          system: systemPrompt,
           tools: {},
         }),
       });
@@ -85,37 +77,14 @@ const ThreadListNew: FC<{ userId?: string }> = ({ userId }) => {
         throw new Error(`API error: ${response.status}`);
       }
 
-      // Parse the streaming response and add it as an assistant message
-      // This is a separate inference call - the user message is not shown
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-      let fullResponse = "";
+      const fullResponse = await readChatStream(response);
 
-      if (reader) {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-
-          const chunk = decoder.decode(value, { stream: true });
-          const lines = chunk.split("\n").filter((line) => line.trim());
-
-          for (const line of lines) {
-            if (line.startsWith("0:")) {
-              const data = JSON.parse(line.slice(2));
-              fullResponse += data;
-            }
-          }
-        }
-      }
-
-      // Add the greeting as an assistant message directly (no user message shown)
-      // This is a separate inference, not part of the chat history
+      // Add the greeting as an assistant message
       if (fullResponse.trim()) {
         runtime.thread.append({
           role: "assistant",
           content: [{ type: "text", text: `[GREETING]${fullResponse.trim()}` }],
         });
-        // TTS will automatically play when the message is added (handled by AssistantMessage component)
       }
     } catch (error) {
       console.error("Error generating greeting:", error);
@@ -127,15 +96,21 @@ const ThreadListNew: FC<{ userId?: string }> = ({ userId }) => {
   return (
     <ThreadListPrimitive.New asChild>
       <Button
-        className="hover:bg-[#8ea4e8] dark:hover:bg-zinc-800 dark:data-[active]:bg-zinc-800 flex items-center justify-start gap-1 rounded-lg px-2.5 py-2 text-start bg-[#4f46e5] text-white dark:bg-[#6366f1]"
+        className={`hover:bg-[#8ea4e8] dark:hover:bg-zinc-800 dark:data-[active]:bg-zinc-800 flex items-center justify-start gap-1 rounded-lg px-2.5 py-2 text-start bg-[#4f46e5] text-white dark:bg-[#6366f1] ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+        disabled={isLoading}
         onClick={() => {
+          if (isLoading) return;
           setTimeout(() => {
             generateGreeting();
           }, 0);
         }}
       >
-        <PlusIcon className="w-4 h-4" />
-        {getNewThreadText(userId)}
+        {isLoading ? (
+          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+        ) : (
+          <PlusIcon className="w-4 h-4" />
+        )}
+        {isLoading ? "Loading..." : getNewThreadText(userId)}
       </Button>
     </ThreadListPrimitive.New>
   );
@@ -165,8 +140,6 @@ const ThreadListItemTitle: FC = () => {
 };
 
 const ThreadListItemArchive: FC = () => {
-  // Archive effectively deletes the thread (removes it from the list)
-  // Since threads are stored in localStorage, archiving removes them
   return (
     <ThreadListItemPrimitive.Archive asChild>
       <TooltipIconButton
